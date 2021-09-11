@@ -4,7 +4,7 @@ My scripts for building emacs and emacs-in-docker.
 
 `./build DEBIAN_RELEASE EMACS_RELEASE`
 
-if `DEBIAN_RELEASE` is `LOCAL`, build `EMACS_RELEASE` on host.  This
+if `DEBIAN_RELEASE` is `local`, build `EMACS_RELEASE` on host.  This
 works if the host is running debian, otherwise you'll need to modify
 the scrips, mainly `./scripts/install_dependencies`.  When building
 locally, we assume having write access to `/usr/local`.  We keep
@@ -12,7 +12,7 @@ sources in `/usr/local/emacs_sources`, we build in
 `/usr/local/emacs_build` and install the final emacs in
 `/usr/local/emacs_dist`.
 
-otherwise builds Emacs in a docker container using `EMACS_RELEASE` as
+otherwise builds Emacs in a docker container using `DEBIAN_RELEASE` as
 a base image. I think I used over time stretch, buster and bullseye,
 but I haven't tried to keep the list of dependencies back compatible.
 
